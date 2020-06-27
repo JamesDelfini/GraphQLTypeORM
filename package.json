@@ -6,19 +6,20 @@
    "dependencies": {
       "graphql-yoga": "^1.18.3",
       "npx": "^10.2.2",
+      "pg": "^8.2.1",
       "reflect-metadata": "^0.1.10",
       "typeorm": "0.2.25"
    },
    "scripts": {
-      "start": "ts-node src/index.ts"
+      "start": "nodemon --exec ts-node src/index.ts"
    },
    "devDependencies": {
+      "@types/node": "^8.0.29",
       "@types/ws": "^7.2.5",
       "nodemon": "^2.0.4",
       "ts-node": "3.3.0",
       "tslint": "^6.1.2",
       "tslint-config-prettier": "^1.18.0",
-      "typescript": "3.3.3333",
-      "@types/node": "^8.0.29"
+      "typescript": "3.3.3333"
    }
 }

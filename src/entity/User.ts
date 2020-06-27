@@ -6,10 +6,16 @@ export class User {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({type: "text"})
+    email: string;
+
+    @Column({type: "boolean", default: true})
+    confirmed: boolean;
+
+    @Column({type: "varchar", length: "230"})
     firstName: string;
 
-    @Column()
+    @Column("text")
     lastName: string;
 
     @Column()

@@ -1,4 +1,6 @@
+import "reflect-metadata";
 import { GraphQLServer } from "graphql-yoga";
+import { createConnection } from "typeorm";
 
 const typeDefs = `
   type Query {
@@ -8,9 +10,12 @@ const typeDefs = `
 
 const resolvers = {
   Query: {
-    hello: (_: any, { name }: any) => `hhello ${name || "World"}`
-  }
+    hello: (_: any, { name }: any) => `hhello ${name || "World"}`,
+  },
 };
 
 const server = new GraphQLServer({ typeDefs, resolvers });
-server.start(() => console.log("Server is running on localhost:4000"));
+
+createConnection().then(() => {
+  server.start(() => console.log("Server is running on localhost:4000"));
+});

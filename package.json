@@ -5,6 +5,7 @@
    "license": "MIT",
    "dependencies": {
       "graphql-yoga": "^1.18.3",
+      "mysql": "^2.18.1",
       "npx": "^10.2.2",
       "pg": "^8.2.1",
       "reflect-metadata": "^0.1.10",
